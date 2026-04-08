@@ -1,4 +1,4 @@
-TEST PASTE<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -16,7 +16,7 @@ html, body {
   color: #1c1c1e;
   -webkit-text-size-adjust: 100%;
 }
-body { padding-bottom: 90px; }
+body { padding-bottom: 110px; }
 
 header {
   background: #2563eb;
@@ -122,16 +122,19 @@ label {
 
 .tabs {
   position: fixed;
-  bottom: 0; left: 0; right: 0;
+  left: 12px; right: 12px;
+  bottom: calc(16px + env(safe-area-inset-bottom));
   background: white;
   display: flex;
-  border-top: 1px solid #e5e7eb;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
   z-index: 100;
-  padding-bottom: env(safe-area-inset-bottom);
+  overflow: hidden;
 }
 .tab {
   flex: 1;
-  padding: 10px 4px;
+  padding: 12px 4px;
   text-align: center;
   background: none;
   border: none;
@@ -342,7 +345,7 @@ const CATEGORIES = {
   expense: [
     '消耗品費','旅費交通費','通信費','接待交際費','会議費',
     '広告宣伝費','水道光熱費','地代家賃','租税公課','損害保険料',
-    '修繕費','荷造運賃','外注工賃','福利厚生費','給料賃金',
+    '修繕費','荥造運賃','外注工賃','福利厚生費','給料賃金',
     '新聞図書費','仕入','雑費'
   ]
 };
@@ -576,7 +579,7 @@ async function analyzeWithClaude(file) {
 }
 
 注意:
-- 金額は「合計」「お会計」「税込」を優先。小計や預かり金・お釣りは無視。
+- 金額は「合計」「お会計」「税込」を優先。小計や預から沐から沐かいな。
 - 日付は和暦も西暦に変換。
 - 店名は一番目立つ正式名称を採用。`;
 
